@@ -1,0 +1,455 @@
+\documentclass[12pt]{article}
+
+\usepackage{geometry}
+\usepackage{a4}
+%\setlength{\parindent}{0pt}
+% \setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{7.2in}
+
+%\addtolength{\hoffset}{-1cm}
+%\addtolength{\voffset}{-3cm}
+%\addtolength{\topmargin}{-2.5cm}
+%\addtolength{\bottommargin}{-2.5cm}
+
+% \usepackage{gchords2}
+\usepackage{gchords}
+
+\iftrue
+% From: Richard Cobbe (cobbe@directlink.net)
+% Subject: Re: Raised Guitar Chords in LaTeX 
+% Newsgroups: comp.text.tex
+% Date: 2000/04/20 
+% \newcommand{\chord}...
+
+\newcommand\mychords{
+\def\chordsize{2.2mm}   % distance between two frets (and two strings)
+\def\numfrets{7}
+\font\fingerfont=cmr5  % font used for numbering fingers
+% \font\fingerfont=cmmi5   % font used for numbering fingers
+\font\namefont=cmr12    % font used for labeling of the chord
+\font\fretposfont=cmr7  % font used for the fret position marker
+% \def\dampsymbol{$\scriptstyle\times$} %  `damp this string' marker
+\def\dampsymbol{{\tiny$\scriptstyle\times$}} %  `damp this string' marker
+}
+
+\renewcommand\yoff{3}
+\renewcommand\fingsiz{1.6}
+
+
+% corcovado:
+
+\newcommand{\AmiSeven}{\chord{t}{f1p5,x,f2p5,f3p5,f4p5,x}{Ami${\,}^{7}$}}
+\newcommand{\AmiSix}{\chord{t}{f2p5,x,f1p4,f3p5,f4p5,x}{Ami${\,}^{6}$}}
+\newcommand{\DNine}{\chord{t}{x,p5,p4,p5,p5,x}{D${\,}^{9}$}}
+\newcommand{\ENineMinusGSharp}{\chord{t}{p4,x,p3,p4,p5,x}{E${\,}^{9-}$/G${}^{\#}$}}
+\newcommand{\CmiSevenFiveMinus}{\chord{t}{x,p3,p4,p3,p4,x}{Cmi${\,}^{7}_{5-}$}}
+
+\newcommand{\GmiSeven}{\chord{t}{f1p3,x,f2p3,f3p3,f4p3,x}{Gmi${\,}^{7}$}}
+\newcommand{\CNine}{\chord{t}{x,p3,p2,p3,p3,x}{C${\,}^{9}$}}
+\newcommand{\DNineMinusFSharp}{\chord{t}{p2,x,p1,p2,p3,x}{D${\,}^{9-}$/F${}^{\#}$}}
+\newcommand{\FSevenMaj}{\chord{t}{p1,x,p2,p2,p1,x}{F${\,}^{7{\rm maj}}$}}
+
+
+\fi
+
+\begin{document}
+
+\mychords
+
+% \mediumchords
+% \chord{t}{x,f3p3,f2p2,n,f1p1,f4p3,}{C}
+%\pagestyle{empty}
+
+% textwidth is \textwidth.
+{\Large
+\begin{center}
+{ \ }
+\vskip3cm
+\centerline{ \textbf{My Favourite Chords Book}}
+\vskip3cm
+\centerline{Ji\v{r}\'{\i} Kvita}
+\vskip3cm
+\centerline{\small \today}
+\end{center}
+}
+\vskip3cm
+%\newpage
+
+% ______________________________________
+
+\newpage
+\tableofcontents
+
+% ______________________________________
+
+\newpage
+
+% ______________________________________
+
+\section{Standard 5 Chords}
+\chords{
+{\chord{t}{x,p5,p4,p2,p3,x}{D${}$}}
+{\chord{t}{p2,n,n,p2,p3,p2}{D${}/$F\#}}
+{\chord{t}{p5,x,p7,p6,p5,x}{A${}$}}
+{\chord{t}{x,n,p2,p2,p2,p5}{A${}$}}
+\def\numfrets{10}{\chord{t}{x,x,p5,p7,p8,p6}{Gmi${}$}}
+\def\numfrets{10}{\chord{t}{x,x,n,p7,p6,p5}{Dmi${}$}}
+\def\numfrets{10}{\chord{t}{x,x,n,p{10},p{10},p{10}}{Dmi${}$}}
+}
+
+
+% ______________________________________
+\section{6 Chords}
+\chords{
+{\chord{t}{x,p5,p4,p4,p3,x}{D${}^6$}}
+{\chord{t}{n,p7,p6,p6,p5,n}{E${}^6$}}
+\chord{t}{p3,x,p2,p4,p3,x}{G${\,}^{6}$}
+\chord{t}{p5,x,p5,p4,p3,n}{G${\,}^{6}$/A}
+\chord{t}{x,p3,p4,p5,p5,x}{Ami${\,}^{6}/$C}
+\chord{t}{p5,x,p4,p6,p7,x}{A${\,}^{6}$}
+}
+
+
+\chords{
+{\chord{t}{p5,x,p4,p5,p5,x}{Ami${}^6$}}
+{\chord{t}{x,p3,p5,p2,p4,x}{Cmi${}^6$}}
+{\chord{t}{x,x,p2,p4,p2,p3}{Emi${}^6$}}
+{\chord{t}{n,p7,p5,p6,p5,n}{Emi${}^6$}}
+{\chord{t}{n,p2,p2,n,p2,p3}{Emi${}^6$}}
+}
+
+% ______________________________________
+
+\section{7 Chords, aka Minor-Seven Chords}
+\chords{
+\chord{t}{p3,x,p3,p4,p3,x}{G${\,}^{7}$}
+\chord{t}{x,p2,p3,p4,p3,x}{G${\,}^{7}$/B}
+\chord{t}{p1,p2,p3,n,p3,x}{G${\,}^{7}/$F}
+\chord{t}{p1,p2,p3,n,p3,n}{G${\,}^{7}_{6}/$F}
+\chord{t}{x,x,p4,p4,p5,p5}{B${\,}^{7}_{4}$}
+\chord{t}{x,x,p3,p4,p2,p4}{C${\,}^{\#\rm 7}$/e\#}
+\chord{t}{x,p4,p3,p4,p2,x}{C${\,}^{\#\rm 7}$}
+}
+
+\chords{
+\chord{t}{x,x,n,p2,p1,p1}{Dmi${\,}^7$}
+\chord{t}{x,p5,p3,p5,p6,x}{Dmi${\,}^7$}
+\def\numfrets{8}\chord{t}{x,p5,p7,p5,p6,x}{Dmi${\,}^{7}$}
+{\def\numfrets{8} \chord{t}{x,x,p2,p4,p3,p3}{Emi${\,}^{7}$}}
+{\def\numfrets{8}\chord{t}{x,p7,x,p7,p8,p7}{Emi${\,}^{7}$}}
+{\def\numfrets{8} \chord{t}{p5,x,p5,p5,p5,x}{Ami${\,}^{7}$}}
+}
+
+
+% ______________________________________
+
+\section{7maj Chords}
+
+\chords{
+\def\numfrets{6}
+\chord{t}{x,p3,p5,p4,p5,x}{C${\,}^{7}$maj}
+\chord{t}{p1,x,p2,p2,p1,x}{F${\,}^{7}$maj}
+\chord{t}{p3,p5,p4,p4,p3,p3}{G${\,}^{7}$maj}
+\chord{t}{x,x,p5,p4,p3,p2}{G${\,}^{7}$maj}
+\chord{t}{n,n,p2,p2,p2,p4}{A${\,}^{7}$maj}
+\chord{t}{n,p2,p1,p1,n,n}{E${\,}^{7}$maj}
+}
+
+
+\chords{
+\def\numfrets{10}
+\chord{t}{p5,p8,p7,p5,p5,p5}{F${\,}^{7}$maj}
+\chord{t}{x,p8,p{10},p9,p{10},x}{F${\,}^{7}$maj}
+\chord{t}{p5,p7,p6,p6,x,x}{A${\,}^{7}$maj}
+\chord{t}{n,x,x,p4,p4,p4}{E${\,}^{7}$maj}
+\chord{t}{n,x,p6,p4,p4,x}{E${\,}^{7}$maj}	
+\chord{t}{p5,x,p3,p5,p5,x}{F${}^{7}$maj/A}
+}
+
+
+% ______________________________________
+
+\section{9/7maj Chords}
+
+\chords{
+\def\numfrets{6}
+\chord{t}{x,p3,p5,p4,p3,x}{C${\,}^{7}$maj${}^{9}$}	
+\chord{t}{x,p3,n,n,n,n}{C${\,}^{7}$maj${}^{9}$}
+\chord{t}{x,p3,p2,p4,p3,x}{C${\,}^{7}$maj${}^{9}$}	
+\chord{t}{n,p2,p1,p1,n,p2}{E${\,}^{7}$maj${}^{9}$}	
+\chord{t}{p1,x,p2,n,p1,n}{F${\,}^{7}$maj${}^{9}$}	
+\def\numfrets{8}\chord{t}{p5,p8,p5,p5,p5,p5}{F${\,}^{7}$maj${}^{9}$}	
+}
+
+
+% ______________________________________
+
+\section{Dim-Chords}
+\chords{
+{\chord{t}{p5,p6,p4,p5,x,x}{Adim}}
+{\chord{t}{p4,x,p3,p4,p3,x}{G${}^{\#}$dim}}
+\chord{t}{x,p4,p5,p3,p5,x}{C${\,}^{\#}$dim}
+\chord{t}{p3,p4,p5,p3,p5,p3}{C${\,}^{\#}$dim}
+\chord{t}{x,p1,p2,n,p2,x}{B${\,}^{\rm b}$dim}
+\chord{t}{x,x,n,p1,n,p1}{Ddim}
+\chord{t}{x,x,p1,p2,p1,p2}{D${\,}^{\#}$dim}
+\chord{t}{p1,p2,n,p1,x,x}{Fdim}
+}
+\\ Especially the first two are nice cool dim chord types which allows you to play very deep base dim variations:) Thanks to Murilo for the second one!
+
+
+% ______________________________________
+
+\section{5+ Chords}
+\chords{
+{\chord{t}{x,p5,p4,p3,p3,x}{D${}^{5+}$}}
+{\chord{t}{p2,x,n,p3,p3,p2}{D${}^{5+}/{\rm F}^{\#}$}}
+\chord{t}{p2,n,n,p3,p3,x}{D${\,}^{5+}$/F${}^{\#}$}
+{\chord{t}{x,n,p3,p2,p2,x}{A${}^{5+}$}}
+{\chord{t}{x,n,x,p2,p2,p1}{A${}^{5+}$}}
+\chord{t}{n,p7,p6,p5,p5,n}{E${\,}^{5+}$}
+\chord{t}{n,p2,p2,p1,p1,n}{E${\,}^{5+}$}
+}
+
+% ______________________________________
+
+\section{7 / 5- Chords}
+
+\chords{
+\chord{t}{n,x,p2,p3,p3,n}{Emi${\,}^{7}_{5-}$}
+\chord{t}{n,x,p2,p3,p3,p3}{Emi${\,}^{7}_{5-}$}
+\chord{t}{x,x,n,p1,p1,p1}{Dmi${\,}^{7}_{5-}$}
+\chord{t}{x,p2,p3,p2,p3,x}{Bmi${\,}^{\rm 7}_{5-}$}
+\chord{t}{p6,p7,p6,p6,x,x}{Bmi${\,}^{\rm 7}_{5-}$}
+}
+\chords{
+\chord{t}{p3,x,p3,p3,p2,x}{Gmi${\,}^{\rm 7}_{5-}$}
+\chord{t}{x,n,p1,n,p1,x}{Ami${\,}^{\rm 7}_{5-}$}
+\chord{t}{x,n,p1,n,p2,x}{A${\,}^{\rm 7}_{5-}$}
+\chord{t}{p3,p3,p4,p3,p5,p3}{C${\,}^{\rm 7}_{5-}$}
+\chord{t}{p2,p3,p4,p2,p5,p2}{F${}^{\#}$mi${\,}^{7}_{5-}$}
+}
+
+
+% ______________________________________
+
+\section{7 / 5+ Chords}
+
+\chords{
+\chord{t}{p3,x,p3,p3,p4,x}{Gmi${\,}^{7}_{5+}$}
+\chord{t}{x,p3,x,p3,p4,p4}{Cmi${\,}^{7}_{5+}$}
+\chord{t}{x,n,p3,n,p1,x}{Ami${\,}^{7}_{5+}$}
+\chord{t}{x,n,p3,n,p2,x}{A${\,}^{7}_{5+}$}
+\chord{t}{p5,x,p5,p6,p6,p5}{A${\,}^{7}_{5+}$}
+\chord{t}{p3,x,p3,p4,p4,x}{G${\,}^{7}_{5+}$}
+}
+
+
+
+\section{Nine-Chords}
+
+The following chords are just an example for mostly the G key, feel free to use your imagination to derive nine-chords for A and H especially, so that you can use them in classical series of E-A-E-H etc. ;-). Another nice application of G${}^9$ is in the series of C${}^{7{\rm maj}}$ C${}^{\#}$dim Dmi G${}^7$ G${}^9$.
+
+\chords{
+\chord{t}{x,p3,p2,p3,p3,x}{C${\,}^{9}$}
+\chord{t}{x,x,p5,p4,p6,p5}{G${\,}^{9}$}
+\chord{t}{x,p5,x,p4,p6,p5}{G${\,}^{9}$/d}
+\chord{t}{p3,x,p3,p2,p3,x}{G${\,}^{9}$}
+\chord{t}{p3,p2,p3,p2,x,x}{G${\,}^{9}$}
+\chord{t}{p3,p5,p3,p4,p3,p5}{G${\,}^{9}$}
+\chord{t}{p1,x,p1,n,p1,x}{F${\,}^{9}$}
+}
+
+\chords{
+\chord{t}{x,p2,p1,p2,p2,x}{B${\,}^{9}$}
+\chord{t}{x,p1,n,p1,p1,x}{B${\,}^{{\rm b}9}$}
+\chord{t}{x,p3,p2,f3p3,f3p3,f3p3}{C${\,}^{9}$}
+\chord{t}{p5,x,p4,p5,p5,x}{D${\,}^{9}$/A}
+\chord{t}{x,p5,p3,p5,p5,x}{Dmi${\,}^{9}$}
+\chord{t}{x,x,p5,p3,p6,p5}{Gmi${\,}^{9}$}
+\chord{t}{n,p2,p2,n,p3,p2}{Emi${\,}^{9}$}
+}
+
+\chords{
+\chord{t}{p3,x,p3,p2,p3,x}{G${\,}^{9}$}
+\chord{t}{p5,x,p4,p5,p5,x}{D${\,}^{9}$/A}
+\chord{t}{n,p2,p3,p1,p3,n}{E${\,}^{9-}$}
+\chord{t}{p3,x,p3,p1,p3,x}{G${\,}^{9-}$}
+\chord{t}{x,p4,p3,p4,p3,x}{C${\,}^{\# 9-}$}
+\chord{t}{x,p4,p3,p4,p5,x}{C${\,}^{\# 9+}$}
+{\def\numfrets{8}\chord{t}{p4,x,p3,p4,p5,x}{E${\,}^{9-}$/G${}^{\#}$}}
+{\def\numfrets{9} \chord{t}{n,x,p2,p1,p3,p3}{E${\,}^{9+}$}}
+
+}
+% ______________________________________
+\section{7/6 Chords ($\sim$ 13's without 9 and 11)}
+\chords{
+\chord{t}{p1,x,p1,p2,p3,x}{F${\,}^{7}_{6}$}
+\chord{t}{n,n,p2,n,p2,p2}{A${\,}^{7}_{6}$}
+\chord{t}{x,p5,x,p5,p7,p7}{D${\,}^{7}_{6}$}
+\chord{t}{n,p2,n,p1,p2,n}{E${\,}^{7}_{6}$}
+\chord{t}{p3,p5,p3,p4,p5,p3}{G${\,}^{7}_{6}$}
+\chord{t}{p3,p2,p3,n,n,n}{G${\,}^{7}_{6}$}
+\chord{t}{p3,x,p3,n,p3,n}{G${\,}^{7}_{6}$}
+}
+
+% ______________________________________
+\section{9/6 Chords ($\sim$ 13's without 11)}
+\chords{
+\chord{t}{p3,x,p3,p4,f4p5,f4p5}{G${\,}^{9}_{6}$}
+\chord{t}{p5,x,p4,p5,f4p7,f4p7}{D${\,}^{9}_{6}$/A}
+\chord{t}{p1,p2,p3,n,p3,n}{G${\,}^{7}_{6}$/F}
+\chord{t}{x,p5,p4,p5,n,n}{D${\,}^{9}_{6}$}
+}
+
+
+% ______________________________________
+
+\section{11 Chords}
+
+\chords{
+\chord{t}{n,x,x,n,n,p5}{Emi${\,}^{\rm add\,11}$}
+\chord{t}{n,x,p4,p4,p3,p5}{Emi${\,}^{11}$}
+\chord{t}{x,p2,n,p2,p2,n}{Bmi${\,}^{11}$}
+\chord{t}{x,p2,p4,n,p3,n}{Bmi${\,}^{\rm add 11}_{6-}$}
+\chord{t}{n,n,n,n,n,n}{A${}^{11}$}
+}
+
+\chords{
+\chord{t}{x,p2,p1,p2,n,n}{B${\,}^{7}_{\rm add\,11}$}
+\chord{t}{p3,p2,p1,p2,n,n}{B${\,}^{7}_{\rm add\,11}$/5+}
+{\def\numfrets{9} \chord{t}{p7,p9,p9,p8,n,n}{B${\,}^{\rm add 11}$}}
+{\def\numfrets{9} \chord{t}{x,p2,p4,p4,p4,n}{B${\,}^{\rm add 11}$}}
+
+
+}
+
+
+
+% _______________________________
+\section{Some add2 Chords}
+
+\chords{
+\chord{t}{n,n,p2,p2,n,n}{A${}^{\rm add\,2}$}
+\chord{t}{x,n,n,p2,p3,n}{D${}^{\rm add\,2}$}
+\chord{t}{p5,p5,p7,p7,p5,p5}{D${}^{\rm add\,2}$}
+\chord{t}{x,x,p3,p2,p1,p3}{F${}^{\rm add\,2}$}
+\chord{t}{p3,x,n,p2,n,p3}{G${}^{\rm add\,2}$}
+}
+
+\chords{
+\chord{t}{x,p3,p2,n,p3,n}{C${}^{\rm add\,2}$}
+\chord{t}{n,p2,p4,p1,n,n}{E${}^{\rm add\,2}$}
+\chord{t}{n,p2,p4,p3,n,n}{E${}^{\rm add\,2}_{11+}$}
+\chord{t}{x,n,p2,p4,p2,n}{A${}^{\rm add\,2}$}
+\chord{t}{x,n,p4,p6,p3,n}{Bmi${}^{{\rm add\,9}}$/A}
+{\def\numfrets{10} \chord{t}{p5,p7,p7,p6,n,n}{A${\,}^{\rm add 2}$}}
+}
+%\centerline{Sting:-)}
+
+% ______________________________________
+
+
+\section{Some add4 Chords}
+
+
+\chords{
+\chord{t}{x,p5,p4,n,p3,x}{D${\,}^{\,{\rm add}4}$}
+\chord{t}{p3,p2,n,n,p1,p3}{G${\,}^{\,{\rm add}4}$}
+\chord{t}{x,p3,p4,n,p1,n}{C${\,}^{\,{\rm add}4+}$}
+\chord{t}{x,p3,p3,n,p1,n}{C${\,}^{\,{\rm add}4}$}
+\chord{t}{x,p5,p4,n,n,p5}{D${\,}^{6}_{\,{\rm add}4}$}
+\chord{t}{p2,p4,p4,p3,n,n}{F${\,}^{\#\,7}_{\,{\rm add}4}$}
+}
+
+
+% ______________________________________
+
+
+\section{Some sus4 Chords}
+
+
+\chords{
+\chord{t}{n,p2,p2,p2,n,n}{E${\,}^{\,{\rm sus}4}$}
+\chord{t}{n,n,p2,p2,p3,n}{A${\,}^{\,{\rm sus}4}$}
+\chord{t}{x,n,n,p2,p3,p3}{D${\,}^{\,{\rm sus}4}$}
+\chord{t}{p3,p5,p5,p5,p3,p3}{G${\,}^{\,{\rm sus}4}$}
+\chord{t}{p3,p5,p3,p5,p3,p3}{G${\,}^{7}_{\,{\rm sus}4}$}
+}
+
+% ______________________________________
+\section{Mixed stuff}
+
+\chords{
+\def\numfrets{6}
+\chord{t}{x,p5,p3,p4,p2,x}{C${\,}^{\rm 7\, maj}$/9-}
+\chord{t}{p5,x,p3,p5,p6,x}{F/A}
+\chord{t}{p3,x,p4,p4,p2,x}{G${\,}^{\rm 7\,maj}_{5-}$}
+\chord{t}{x,n,p6,p4,p5,n}{E/A}
+}
+%\centerline{(Z. Navarov\'{a}, And\v{e}lsk\'{a})}
+
+
+% _______________________________
+
+\newpage
+
+\section{Notes on ``Tension'' Chords}
+
+By tension I mean the presence of two tones separated by a half-tone and an octave.
+The first-hand example are the 7maj chords (the base chord of bossa-nova:), where the tension is pleasing and soft.
+
+Other example are more magic 7/6, or 13 chords, where there is diminished 7 and 6, so e.g. in A there should be tones $g$ and $f\#$, usually separated by an octave (therefore ``13''). 
+
+Dramatic tension is present in 9- chords, e.g. C${}^{9-}$, which really means  C${}^{9-}_{7}$, and the disturbing unrestelessness is coming from the fact that the chord effectivelly contains major and minor thirds ($e = 3$ and $es = 9-$, separated by an octave), somehow not being sre whether being minor or major chords.
+
+% _______________________________
+\section{Some Improvisation Schemes}
+{\ }
+\bigskip
+\\ Bmi G(7maj) A F\#
+\bigskip
+\\ Ami G F E
+\\ C G F E
+\bigskip
+\\ F\#mi F\#mi/E A H
+\bigskip
+\\ D7maj E9 Emi A
+\bigskip
+\\ Emi D H7
+\bigskip
+\\ C7maj C\#dim Dmi G7
+\bigskip
+\\ H7 Emi H7 Emi
+\\ E Ami D7 G Emi Am C H7
+\bigskip
+\\ Bmi Bmi/a\# Bmi/a E9/g\#
+\bigskip
+\\ Am Am/G Am/F E
+\bigskip
+\\ \ldots and of course standard blues-12:)
+\bigskip
+\\ A${}^7$maj B${}^b$dim Bmi${}^{7}$ E${\,}^{9-}$.
+% _______________________________
+\section{Some Transitions}
+Gmi7/5+ Cmi7/5+ A7/5- D7maj C7maj F7maj Bb7maj
+
+% _______________________________
+\section{Some Equivalences}
+
+\begin{tabbing}
+\hspace{2cm} \= \ \hspace{0.8cm} \= 
+\\ D${}^6$          \> $\sim$ \> G${}^{7{\rm maj}}$
+\\ C${}^6$          \> $\sim$ \> Ami/C
+\\ A${}^7_{5+}$/C\# \> $\sim$ \> B${}^b$mi${}^{6}$/D${}^b$
+\\ Ami${}^6$        \> $\sim$ \> D${}^{9}$/A
+\\ E${\,}^{9-}$/G${}^{\#}$ \> $\sim $ \> G${}^{13}$/9-
+
+%\\ ${}^$ \> $\sim$ \> ${}^{}$
+\end{tabbing}
+
+Dim chords are generated taking a major seven chord and by sharping the tonical tone.
+Or by taking a chord with 7 (by default 7-) and diminishing all tones except for the tinical (therefore ``diminished chord''). All dim chords are equivalent, i.e. any tone from the chord can be chosen to form the name of the chord, i.e. it is only another form of the same dim chord. This is easy to understand if we realise that tones in the dim chord are 3-halftones equidistant, therefore periodical, symmetrical and closed. You can play the dim scale to infinty;-)
+
+\end{document}
+

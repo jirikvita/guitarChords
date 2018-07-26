@@ -1,0 +1,383 @@
+\documentclass[12pt]{article}
+
+\usepackage{geometry}
+\usepackage{a4}
+%\setlength{\parindent}{0pt}
+% \setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{7.2in}
+
+%\addtolength{\hoffset}{-1cm}
+%\addtolength{\voffset}{-3cm}
+%\addtolength{\topmargin}{-2.5cm}
+%\addtolength{\bottommargin}{-2.5cm}
+\usepackage[utf8]{inputenc}
+% \usepackage{gchords2}
+\usepackage{gchords}
+
+\iftrue
+% From: Richard Cobbe (cobbe@directlink.net)
+% Subject: Re: Raised Guitar Chords in LaTeX 
+% Newsgroups: comp.text.tex
+% Date: 2000/04/20 
+% \newcommand{\chord}...
+
+\newcommand\mychords{
+\def\chordsize{2.2mm}   % distance between two frets (and two strings)
+\def\numfrets{7}
+\font\fingerfont=cmr5  % font used for numbering fingers
+% \font\fingerfont=cmmi5   % font used for numbering fingers
+\font\namefont=cmr12    % font used for labeling of the chord
+\font\fretposfont=cmr7  % font used for the fret position marker
+% \def\dampsymbol{$\scriptstyle\times$} %  `damp this string' marker
+\def\dampsymbol{{\tiny$\scriptstyle\times$}} %  `damp this string' marker
+}
+
+\renewcommand\yoff{3}
+\renewcommand\fingsiz{1.6}
+
+
+% corcovado:
+
+\newcommand{\AmiSeven}{\chord{t}{f1p5,x,f2p5,f3p5,f4p5,x}{Ami${\,}^{7}$}}
+\newcommand{\AmiSix}{\chord{t}{f2p5,x,f1p4,f3p5,f4p5,x}{Ami${\,}^{6}$}}
+\newcommand{\DNine}{\chord{t}{x,p5,p4,p5,p5,x}{D${\,}^{9}$}}
+\newcommand{\ENineMinusGSharp}{\chord{t}{p4,x,p3,p4,p5,x}{E${\,}^{9-}$/G${}^{\#}$}}
+\newcommand{\CmiSevenFiveMinus}{\chord{t}{x,p3,p4,p3,p4,x}{Cmi${\,}^{7}_{5-}$}}
+
+\newcommand{\GmiSeven}{\chord{t}{f1p3,x,f2p3,f3p3,f4p3,x}{Gmi${\,}^{7}$}}
+\newcommand{\CNine}{\chord{t}{x,p3,p2,p3,p3,x}{C${\,}^{9}$}}
+\newcommand{\DNineMinusFSharp}{\chord{t}{p2,x,p1,p2,p3,x}{D${\,}^{9-}$/F${}^{\#}$}}
+\newcommand{\FSevenMaj}{\chord{t}{p1,x,p2,p2,p1,x}{F${\,}^{7{\rm maj}}$}}
+
+
+\fi
+
+\begin{document}
+
+\mychords
+
+% \mediumchords
+% \chord{t}{x,f3p3,f2p2,n,f1p1,f4p3,}{C}
+%\pagestyle{empty}
+
+% textwidth is \textwidth.
+{\Large
+\begin{center}
+{ \ }
+\vskip2cm
+\centerline{ \textbf{Akordy}}
+\vskip2cm
+\centerline{Ji\v{r}\'{\i} Kvita}
+\vskip1cm
+\centerline{\small \today}
+\end{center}
+}
+\vskip2cm
+%\newpage
+
+% ______________________________________
+
+\tableofcontents
+
+% ______________________________________
+\newpage
+\section{Durové: Aneb Od 5 po 13}
+
+
+\begin{itemize}
+
+\item C${}^{5}$ --- základní durový kvintakord s tercií a kvintou, prostě Cdur či C:
+  \\ $[1,3,5]$, tj. $[c,e,g]$
+
+\item C${}^{7}$ --- přidáním tercie nad pátý tón vzniká sept akort. Sedmý stupeň v názvu akordu vždy a automaticky značí septimu sníženou, tj. 7-:
+  \\ $[1,3,5,7-]$, tj. $[c,e,g,b]$
+
+\item C${}^{9}$ --- přidáním další tercie, tentokráte už standardně v rámci předznamenání stupnice (zde C-dur) vznikne devítka: 
+  \\ $[1,3,5,7-,9]$, tj. $[c,e,g,b,d]$
+
+\item C${}^{11}$ --- následuje jedenáctka:
+  \\ $[1,3,5,7-,9,11]$, tj. $[c,e,g,b,d,f]$
+
+\item C${}^{13}$ --- a třináctka, která v sobě obsahuje všechny tóny stupnice C-dur (se sníženou septimou), a vzhledem k sedmitónovému obsahu ji nelze úplně obsáhnout na kytaře:
+  \\ $[1,3,5,7-,9,11,13]$, tj. $[c,e,g,b,d,f,a]$
+  \\ Jde vlastně o akord C${}^7$, ke kterému ještě shora přidáme molový akord od 2. stupně, zde Dmi:-)
+\end{itemize}
+
+Pár poznámek: Výše uvedené akordy jsou tedy postupně podmnožinami:
+\begin{itemize}
+  \item C${}^{5}$ $\subset$ C${}^{7}$ $\subset$ C${}^{9}$ $\subset$ C${}^{11}$ $\subset$ C${}^{13}$ 
+  \item 6. a 13. stupeň jsou si ekvivalentní až na oktávu, \\ stejně tak 4. a 11. či 2. a 9.
+\end{itemize}
+
+\section{Durové akordy s add, sus, 4, 6, 11, ${}^{9\pm}_{5\pm}$\ldots}
+\begin{itemize}
+  \item Kromě akordu C${}^{9}$ se vyskytuje též akord C${}^{\rm add9}$ (ekvivalentní C${}^{\rm add2}$), kde je přidán (\emph{add}ed) pouze 9. resp. 2. stupeň, tj. bez malé septimy, narozdíl od standardní devítky, která malou septimu automaticky obsahuje.
+   \\ C${}^{\rm add9}$: $[1,3,5,9]$, tj. $[c,e,g,d]$ příp. $[1,2,3,5]$, tj. $[c,d,e,g]$ dle obratu akordu a jeho úlohy.
+  \item Nyní zpět k septimě: chceme-li ji velkou, píšeme explicitně C${}^{\rm 7maj}$ (někdy též C${}^{\rm maj7}$, Cmaj či C${}^\triangle$): \\ C${}^{\rm 7maj}$: $[1,3,5,7]$, tj. $[c,e,g,h]$. Základní akord bossa-novy:)
+  \item Související akord je ještě lyričtější C${}^{\rm 9maj}$, kde kromě velké septimy zaznívá též devítka (maj se zde rozumí opět k septimě)
+   \\ C${}^{\rm 9maj}$: $[1,3,5,7,9]$, tj. $[c,e,g,h,d]$
+  \item Značka \emph{sus} znamená nahrazení/průtah; obyčejně tercie za kvartu:
+   \\ C${}^{\rm 4sus}$  či C${}^{\rm sus4}$: $[1,4,5]$, tj. $[c,f,g]$
+  \item Můžeme vytvoři i akord C${}^{\rm add4}$ či C${}^{\rm add11}$
+   \\ C${}^{\rm add4}$: $[1,3,4,5]$, tj. $[c,e,f,g]$ či $[1,3,5,11]$, tj. $[c,e,g,f]$.
+
+  \item Dodejme ještě C${}^{6}$, v kterém se často kvinta vynechává, tj. jde pak přibližně o Ami s basem C, tj. Ami/C. 
+   \\ C${}^{6}$: $[1,3,5,6]$, tj. $[c,e,g,a]$.
+  \item Méně častý, leč občas nezbytný, je akord  C${}^{5+}$, občas prostě C$+$ či C${}^{5\#}$:
+   \\ C${}^{5+}$: $[1,3,5+]$, tj. $[c,e,g{}^{\#}]$, který je zároveň i akordem E${}^{5+}$ a G${}^{\#\,5+}$ (obsahuje tři tóny symetricky vzdáleny o 4 půltóny).
+   \\ Existují čtyři různé 5+ akordy, kterým jsou všechny ostatní ekvivalentní.
+
+  \item Ještě méně častý je C${}^{5-}$, související s C${}^{\rm add11+}$ (zachováme-li současně i původní kvintu):
+   \\ C${}^{5-}$: $[1,3,5-]$, tj. $[c,e,f^{\#}]$, který nám však připraví půdu pro akordy typu
+   \\ (C${}^{11+}$: $[1,3,5,11+]$, tj. $[c,e,g,f^{\#}]$)
+  \item C${}^{7}_{5\pm}$, kde zvyšujeme či snižujeme 5.~stupeň a malá septima zůstává beze změny:
+   \\ C${}^{}$: $[1,3,5\pm,7-]$, tj. $[c,e,{}^{g\#}_{gb},b]$
+  \item C${}^{9\pm}_{5\pm}$, kde zvyšujeme či snižujeme 9. a/nebo 5.~stupeň (a ukrytá malá septima zůstává beze změny).
+   \\ C${}^{}$: $[1,3,5\pm,7-,9\pm]$, tj. $[c,e,{}^{g\#}_{gb},b,{}^{d\#}_{db}]$
+  \item Uveďme ještě C${}^{9\pm}$, kde opět posunujeme pouze devítku na sníženou či zvýšenou variantu.
+   \\ C${}^{9\pm}$: $[1,3,5,7-,9\pm]$, tj. $[c,e,g,b,{}^{d\#}_{db}]$
+   \\ Všimněme si, že C${}^{9-}$ obsahuje tón $c$ i $d^b$ ($c^\#$), a tónovou skladbou je tak velmi podobný akordu C${}^\#$dim.
+   \\ C${}^{9-}$ zase obsahuje velkou i malou tercii $e$ i $d^\#$ ($e^b$), a občas se používá v blues k rozmazání hranice mezi dur a mol.
+  \item Následujme C${}^{7}_{6}$
+   \\ C${}^{7}_{6}$: $[1,3,5,7-,13]$, tj. $[c,e,g,b,a]$, kde nenecháváme $b$ a $a$ zaznít vedle sebe, tj. jde technicky spíše o C${}^{7}_{\rm add 13}$.
+
+  \item Závěrem ještě C${}^{9}_{6}$
+   \\ C${}^{9}_{6}$: $[1,3,5,7-,9,13]$, tj. $[c,e,g,b,d,a]$, kde opět nenecháváme $b$ a $a$ zaznít vedle sebe, tj. jde technicky spíše o C${}^{9}_{\rm add 13}$, který se liší od C${}^{13}$ absencí stupně 11 (tón $f$).
+
+  \item A nakonec ještě poznámku, že značka C${}^5$ občas může značit nepřítomnost tercie, tj. vlastně C${}^5_{\rm no\,3}$, tedy:
+   \\ C${}^{5}_{\rm no\,3}$: $[1,3,8]$, tj. $[c,g,c]$, tzv. power akordy.
+
+
+%% C add13-/sus4 = C5+/sus4 ???
+
+\end{itemize}
+\section{Molové 6, 7, 9, ${}^{7}_{5-}$}
+
+Molové akordy se v litaratuře značí rozličně: Ami, Am, A-, A${}^{3-}$, a. My se budeme držet schématu Ami (minor, tj. malá, tercie).
+
+\begin{itemize}
+  \item Ami --- v rámci předznamenání paralelní stupnice Cdur jde opět o kvintakord 
+ \\ Ami: $[1,3,5]$, tj. $[a,c,e]$
+ \\ v rámci předznamenání Adur jde o $[1,3-,5]$, tj. stále $[a,c,e]$.
+ \\ V dalším budeme vždy uvažovat, že se pohybujeme v předznamenání paralelní stupnice dur (Emi--G, Ami--C, Hmi--D, Fmi--As\ldots).
+  \item Ami${}^{7}$ obsahuje septimu, tj.
+   \\ Ami${}^{7}$: $[1,3,5,7]$, tj. $[a,c,e,g]$ (srovnej podobnost s C${}^6$).
+  \item Ami${}^{6}$ obsahuje zvětšenou sextu, tj.
+   \\ Ami${}^{6}$: $[1,3,5,6+]$, tj. $[a,c,e,f^\#]$
+  \item Ami${}^{9}$ obsahuje kromě septimy i devítku:
+   \\ Ami${}^{9}$: $[1,3,5,7,9]$, tj. $[a,c,e,g,h]$
+  \item Ami${}^{7}_{5-}$ (občas značen jako A${}^{\o}$) obsahuje kromě septimy sníženou kvintu:
+   \\ Ami${}^{7}_{5-}$: $[1,3,5-,7]$, tj. $[a,c,e^b,g]$
+  \item Poznámka: všimněte si, že kdybychom při tvorbě molových akordů vycházeli z předznamenání stupnice Adur, máme konzistentně s durovými akordy septimu vždy malou ($g$) a sextu i devítku velkou ($f^\#$, $h$); molovost akordu spočívá ve vždy malé tercii ($c$).
+
+  \item Definujme též Ami${}^{\rm 7maj}$ jako
+   \\ Ami${}^{\rm 7maj}$: $[1,3,5,7+]$, tj. $[a,c,e,g^\#]$ (srovnej podobnost s C${}^{5+}$).
+
+
+  \item Přidejme Ami${}^{\rm add11}$
+   \\ Ami${}^{\rm add11}$: $[1,3,5,11]$, tj. $[a,c,e,d]$
+  \item nebo Ami${}^{\rm add2}$, případně Ami${}^{\rm add9}$
+   \\ Ami${}^{\rm add9}$: $[1,3,5,9]$, tj. $[a,c,e,h]$
+  \item a ještě třeba Ami${}^{\rm add13}$
+   \\ Ami${}^{\rm add13}$: $[1,3,5,13]$, tj. $[a,c,e,f]$
+
+  \item či ještě exotičtější Hmi${}^{\rm add13}_{\rm add11}$
+   \\ Hmi${}^{\rm add13}_{\rm add11}$: $[1,3,5,11,13]$, tj. $[h,d,f^\#,e,g]$
+  
+  \item a nakonec snad Emi${}^{\rm add9}_{\rm 7maj}$
+   \\ Emi${}^{\rm add9}_{\rm 7maj}$: $[1,3,5,7+,9]$, tj. $[e,g,h,f^\#,d^\#]$
+
+\end{itemize}
+
+\section{Dim akordy}
+Pomněme ještě dim (diminished, zmenšené) akordy, např.
+\\ Cdim --- $[1,3^b,5^b,7^{bb}]$, tj. $[c,e^b,g^b,a]$, který obdržíme ze sept-akordu dodatečným snížením tercie a kvinty, a malé septimy na zmenšenou. 
+\\ Dim akord (občas značen jako C${}^\circ$) však také můžeme chápat jako sept akord, u kterého zvýšíme první tón:
+C${}^7$ $[c,e,g,b]$ $\Rightarrow$ C$^{\#\,}$dim $[c^\#,e,g,b]$.
+\\ Zejména druhá poučka usnadňuje hledání hmatu pro dim akord na kytaře či klavíru.
+\\ Dim akord obsahuje 4 tóny vzdálené o 3 půltóny, a je tedy opět periodický a jeho název lze utvořit od kteréhokoli tónu v akordu, tj. C${}^{\#}$dim je současně i Edim, Gdim, B${}^b$dim. Srovnej periodicitu u Dur5+ akordů.
+Dim akord není ani durový, ani molový, spíše takový bezrozměrný.
+\\ Dim stupnici $c^\#, e, g, b, c^\#$\ldots lze hrát do nekonečna, či do vyčerpání pražců.
+\\ Existují tak tedy jen tři základní (o půltón po sobě jdoucí) dim akordy, např. Ddim, D${}^\#$dim, Edim; s kterými jsou všechny ostatní ekvivalentní. Výběr názvu dim akordu pak většinou závisí na tom, jaký basový tón je v daném okamžiku potřeba.
+
+%\chords{
+%\chord{t}{x,p3,p2,p3,p3,x}{C${\,}^{9}$}
+%\chord{t}{x,x,p5,p4,p6,p5}{G${\,}^{9}$}
+%\chord{t}{x,p5,x,p4,p6,p5}{G${\,}^{9}$/d}
+%\chord{t}{p3,x,p3,p2,p3,x}{G${\,}^{9}$}
+%\chord{t}{p3,p2,p3,p2,x,x}{G${\,}^{9}$}
+%\chord{t}{p3,p5,p3,p4,p3,p5}{G${\,}^{9}$}
+%\chord{t}{p1,x,p1,n,p1,x}{F${\,}^{9}$}
+%}
+
+%\chords{
+%\chord{t}{x,p2,p1,p2,p2,x}{H${\,}^{9}$}
+%\chord{t}{x,p1,n,p1,p1,x}{B${\,}^{{\rm b}9}$}
+%\chord{t}{x,p3,p2,f3p3,f3p3,f3p3}{C${\,}^{9}$}
+%\chord{t}{p5,x,p4,p5,p5,x}{D${\,}^{9}$/A}
+%\chord{t}{x,p5,p3,p5,p5,x}{Dmi${\,}^{9}$}
+%\chord{t}{x,x,p5,p3,p6,p5}{Gmi${\,}^{9}$}
+%\chord{t}{n,p2,p2,n,p3,p2}{Emi${\,}^{9}$}
+%}
+
+%\chords{
+%{\chord{t}{p5,p6,p4,p5,x,x}{Adim}}
+%{\chord{t}{p4,x,p3,p4,p3,x}{G${}^{\#}$dim}}
+%\chord{t}{x,p4,p5,p3,p5,x}{C${\,}^{\#}$dim}
+%\chord{t}{p3,p4,p5,p3,p5,p3}{C${\,}^{\#}$dim}
+%\chord{t}{x,p1,p2,n,p2,x}{B${\,}^{\rm b}$dim}
+%\chord{t}{x,x,n,p1,n,p1}{Ddim}
+%\chord{t}{x,x,p1,p2,p1,p2}{D${\,}^{\#}$dim}
+%\chord{t}{p1,p2,n,p1,x,x}{Fdim}
+%}
+
+%\chords{
+%\def\numfrets{6}
+%\chord{t}{x,p3,p5,p4,p5,x}{C${\,}^{7}$maj}
+%\chord{t}{x,p3,p5,p4,p3,x}{C${\,}^{7}$maj${}^{9}$}	
+%\chord{t}{x,p3,p2,p4,p3,x}{C${\,}^{7}$maj${}^{9}$}	
+%\chord{t}{p1,x,p2,p2,p1,x}{F${\,}^{7}$maj}
+%\chord{t}{p3,p5,p4,p4,p3,p3}{G${\,}^{7}$maj}
+%\chord{t}{x,x,p5,p4,p3,p2}{G${\,}^{7}$maj}
+%\chord{t}{n,n,p2,p2,p2,p4}{A${\,}^{7}$maj}
+%}
+
+%\chords{
+%\def\numfrets{10}
+%\chord{t}{p5,p8,p7,p5,p5,p5}{F${\,}^{7}$maj}
+%\chord{t}{x,p8,p{10},p9,p{10},x}{F${\,}^{7}$maj}
+%\chord{t}{p5,p7,p6,p6,x,x}{A${\,}^{7}$maj}
+%\chord{t}{n,x,x,p4,p4,p4}{E${\,}^{7}$maj}
+%\chord{t}{n,x,p6,p4,p4,x}{E${\,}^{7}$maj}	
+%}
+
+%\chords{
+%{\chord{t}{p5,x,p4,p5,p5,x}{Ami${}^6$}}
+%{\chord{t}{x,p5,p4,p4,p3,x}{D${}^6$}}
+%{\chord{t}{x,p5,p4,p3,p3,x}{D${}^{5+}$}}
+%{\chord{t}{n,p7,p5,p6,p5,n}{Emi${}^6$}}
+%{\chord{t}{n,p2,p2,n,p2,p3}{Emi${}^6$}}
+%{\chord{t}{n,p7,p6,p6,p5,n}{E${}^6$}}
+%\chord{t}{n,p7,p6,p5,p5,n}{E${\,}^{5+}$}
+%\chord{t}{n,p2,p2,p1,p1,n}{E${\,}^{5+}$}
+%}
+
+%\chords{
+%\chord{t}{n,x,p2,p3,p3,n}{Emi${\,}^{7}_{5-}$}
+%\chord{t}{n,x,p2,p3,p3,p3}{Emi${\,}^{7}_{5-}$}
+%\chord{t}{x,n,n,p1,p1,p1}{Dmi${\,}^{7}_{5-}$}
+%\chord{t}{x,p2,p3,p2,p3,x}{Bmi${\,}^{\rm 7}_{5-}$}
+%\chord{t}{p6,p7,p6,p6,x,x}{Bmi${\,}^{\rm 7}_{5-}$}
+%\chord{t}{p3,x,p3,p3,p2,x}{Gmi${\,}^{\rm 7}_{5-}$}
+%\chord{t}{x,n,p1,p2,p1,x}{Ami${\,}^{\rm 7}_{5-}$}
+%\chord{t}{p3,p3,p4,p3,p5,p3}{C${\,}^{\rm 7}_{5-}$}
+%}
+
+%\chords{
+%\chord{t}{p3,x,p3,p4,p3,x}{G${\,}^{7}$}
+%\chord{t}{x,p2,p3,p4,p3,x}{G${\,}^{7}$/H}
+%\chord{t}{p3,x,p2,p4,p3,x}{G${\,}^{6}$}
+%\chord{t}{p3,x,p3,p2,p3,x}{G${\,}^{9}$}
+%\chord{t}{p3,x,p3,p4,f4p5,f4p5}{G${\,}^{9}_{6}$}
+%\chord{t}{p5,x,p4,p5,p5,x}{D${\,}^{9}$/A}
+%\chord{t}{p5,x,p4,p5,f4p7,f4p7}{D${\,}^{9}_{6}$/A}
+%}
+
+
+%\chords{
+%\chord{t}{x,n,p3,n,p2,n}{A${\,}^{7}_{5+}$}
+%\chord{t}{p5,x,p5,p6,p6,p5}{A${\,}^{7}_{5+}$}
+%\chord{t}{n,p2,p3,p1,p3,n}{E${\,}^{9-}$}
+%\chord{t}{p2,p4,p4,p3,n,n}{F${\,}^{\#\,7}_{\,{\rm add}4}$}
+%\chord{t}{x,p5,p4,n,p3,x}{D${\,}^{\,{\rm add}4}$}
+%\chord{t}{x,p3,p4,n,p1,n}{C${\,}^{\,{\rm add}4+}$}
+%\chord{t}{x,p5,p3,p5,p6,x}{Dmi${\,}^7$}
+%}
+
+%\chords{
+%\chord{t}{p1,x,p1,p2,p3,x}{F${\,}^{7}_{6}$}
+%\chord{t}{p1,x,p1,p2,p2,x}{F${\,}^{7}_{5+}$}
+%\chord{t}{p5,x,p3,p5,p6,x}{F/A}
+%\chord{t}{p5,x,p3,p5,p5,x}{F${}^{7}$maj/A}
+%}
+
+
+%\chords{
+%\def\numfrets{6}
+%\chord{t}{x,p4,p3,p4,p3,x}{C${\,}^{\# 9-}$}
+%\chord{t}{x,p5,p3,p4,p2,x}{C${\,}^{\# 7}$/9-}
+%\chord{t}{p2,n,n,p3,p3,x}{D${\,}^{5+}$/F${}^{\#}$}
+%\chord{t}{x,p2,p4,n,p3,n}{Hmi${\,}^{\rm add 11}_{6-}$}
+%}
+
+%\chords{
+%{\def\numfrets{9}\chord{t}{x,p7,x,p7,p8,p7}{Emi${\,}^{7}$}}
+%{\def\numfrets{9} \chord{t}{n,p7,p6,p7,p8,n}{E${\,}^{11-}$}}
+%{\def\numfrets{9} \chord{t}{n,x,p2,p1,p3,p3}{E${\,}^{11-}$}}
+%{\def\numfrets{9} \chord{t}{n,p7,p6,p6,p5,n}{E${}^{6}$}}
+%}
+
+%\chords{
+%{\def\numfrets{8} \chord{t}{x,x,p2,p4,p3,p3}{Emi${\,}^{7}$}}
+%{\def\numfrets{8} \chord{t}{p5,x,p5,p5,p5,x}{Ami${\,}^{7}$}}
+%{\def\numfrets{8} \chord{t}{p5,x,p4,p6,p7,x}{A${\,}^{6}$}}
+%{\def\numfrets{8}\chord{t}{p4,x,p3,p4,p5,x}{E${\,}^{9-}$/G${}^{\#}$}}
+%}
+%\bigskip
+
+%\newpage
+
+%\chords{
+%\def\numfrets{8}\chord{t}{x,p5,p7,p5,p6,x}{Dmi${\,}^{7}$}
+%\chord{t}{x,x,p3,p4,p2,p4}{C${\,}^{\#\rm 7}$/e\#}
+%\chord{t}{x,p4,p3,p4,p2,x}{C${\,}^{\#\rm 7}$}
+%}
+
+%\chords{
+%\chord{t}{x,p2,p1,p2,n,n}{H${\,}^{7}_{\rm add\,11}$}
+%\ \ 
+%\chord{t}{p3,p2,p1,p2,n,n}{H${\,}^{7}_{\rm add\,11}$/5+}
+%\ \ 
+%\chord{t}{p5,x,p5,p4,p3,n}{G${\,}^{6}$/A}
+%}
+
+
+%\chords{
+%\chord{t}{x,n,p2,p4,p2,n}{A${}^{\rm add\,2}$}
+%\chord{t}{x,n,p4,p6,p3,n}{Hmi${}^{{\rm add\,9}}$/A}
+%\chord{t}{x,n,p6,p4,p5,n}{E/A}
+%}
+
+%\chords{
+%\chord{t}{n,p2,p4,p1,n,n}{E${}^{\rm add\,2}$}
+%\chord{t}{n,p2,p4,p3,n,n}{E${}^{\rm add\,2}_{5-}$}
+%\chord{t}{n,n,n,n,n,n}{A${}^{7}_{4\,\,{\rm add\,2}}$}
+%}
+
+% _______________________________
+
+\newpage
+\section{Některé ekvivalence}
+
+\begin{tabbing}
+\hspace{2cm} \= \ \hspace{0.8cm} \= \hspace{0.8cm} \= 
+\\ D${}^6$          \> $\sim$ \> G${}^{7{\rm maj}}$/D
+\\ C${}^6$          \> $\sim$ \> Ami/C
+\\ A${}^7_{5+}$/C\# \> $\sim$ \> B${}^b$mi${}^{6}$/D${}^b$
+\\ Ami${}^6$        \> $\sim$ \> D${}^{9}$/A $\sim$ F${}^\#$mi${}^{7}_{5-}$
+\\ E${\,}^{9-}$/G${}^{\#}$ \> $\sim $ \> G${}^{13}$/9-
+
+%\\ ${}^$ \> $\sim$ \> ${}^{}$
+\end{tabbing}
+
+\noindent Ddim $\equiv$ Fdim $\equiv$ G${}^\#$dim $\equiv$ Hdim.
+\\ D${}^\#$dim $\equiv$ F${}^\#$dim $\equiv$ Adim $\equiv$ Cdim. 
+\\ Edim $\equiv$ Gdim $\equiv$ B${}^b$dim $\equiv$ C${}^\#$ dim.
+\\
+\\ C+ $\equiv$ E+ $\equiv$ G${}^{\#}$+
+\\ C${}^{\#}+$ $\equiv$ F+ $\equiv$ A+
+\\ D+ $\equiv$ F${}^\#$+ $\equiv$ B${}^b$+
+\\ D${}^\#$+ $\equiv$ G+ $\equiv$ H+
+
+\end{document}
+

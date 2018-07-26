@@ -1,0 +1,136 @@
+\documentclass[12pt]{article}
+
+\usepackage{geometry}
+\setlength{\parindent}{0pt}
+% \setlength{\textwidth}{6.5in}
+\setlength{\textwidth}{7.2in}
+
+% \usepackage{gchords2}
+\usepackage{gchords}
+
+\iftrue
+% From: Richard Cobbe (cobbe@directlink.net)
+% Subject: Re: Raised Guitar Chords in LaTeX 
+% Newsgroups: comp.text.tex
+% Date: 2000/04/20 
+% \newcommand{\chord}...
+
+\newcommand\mychords{
+\def\chordsize{2.2mm}   % distance between two frets (and two strings)
+\def\numfrets{6}
+\font\fingerfont=cmr5  % font used for numbering fingers
+% \font\fingerfont=cmmi5   % font used for numbering fingers
+\font\namefont=cmr12    % font used for labeling of the chord
+\font\fretposfont=cmr7  % font used for the fret position marker
+% \def\dampsymbol{$\scriptstyle\times$} %  `damp this string' marker
+\def\dampsymbol{{\tiny$\scriptstyle\times$}} %  `damp this string' marker
+}
+
+\renewcommand\yoff{3}
+\renewcommand\fingsiz{1.6}
+
+% corcovado:
+
+\newcommand{\AmiSeven}{\chord{t}{f1p5,x,f2p5,f3p5,f4p5,x}{Ami${\,}^{7}$}}
+\newcommand{\AmiSix}{\chord{t}{f2p5,x,f1p4,f3p5,f4p5,x}{Ami${\,}^{6}$}}
+\newcommand{\DNine}{\chord{t}{x,p5,p4,p5,p5,x}{D${\,}^{9}$}}
+\newcommand{\ENineMinusGSharp}{\chord{t}{p4,x,p3,p4,p5,x}{E${\,}^{9-}$/G${}^{\#}$}}
+\newcommand{\CmiSevenFiveMinus}{\chord{t}{x,p3,p4,p3,p4,x}{Cmi${\,}^{7}_{5-}$}}
+
+\newcommand{\GmiSeven}{\chord{t}{f1p3,x,f2p3,f3p3,f4p3,x}{Gmi${\,}^{7}$}}
+\newcommand{\CNine}{\chord{t}{x,p3,p2,p3,p3,x}{C${\,}^{9}$}}
+\newcommand{\DNineMinusFSharp}{\chord{t}{p2,x,p1,p2,p3,x}{D${\,}^{9-}$/F${}^{\#}$}}
+\newcommand{\FSevenMaj}{\chord{t}{p1,x,p2,p2,p1,x}{F${\,}^{7{\rm maj}}$}}
+
+\newcommand{\FmiSeven}{\chord{t}{p1,x,p1,p1,p1,x}{Fmi${\,}^{7}$}}
+\newcommand{\BNine}{\chord{t}{x,p1,n,p1,p1,x}{B${}^{{\rm b}\,9}$}}
+\newcommand{\ASevenFivePlus}{\chord{t}{n,n,p3,n,p2,n}{A${\,}^{7}_{5+}$}}
+\newcommand{\ASeven}{\chord{t}{n,n,p2,n,p2,n}{A${\,}^{7}$}}
+\newcommand{\DmiSeven}{\chord{t}{x,n,n,p2,p1,p1}{Dmi${\,}^{7}$}}
+\newcommand{\EmiSeven}{\chord{t}{n,2,n,n,p3,n}{Emi${\,}^{7}$}}
+\newcommand{\EmiSevenFiveMinus}{\chord{t}{n,x,p2,p3,p3,n}{Emi${\,}^{7}_{5-}$}}
+
+\fi
+
+\begin{document}
+
+\mychords
+
+% \mediumchords
+% \chord{t}{x,f3p3,f2p2,n,f1p1,f4p3,}{C}
+\pagestyle{empty}
+
+% textwidth is \textwidth.
+\begin{center}
+\Large
+\textbf{Corcovado} \\ \textsl{Antonio Carlos Jobim} \\
+ \textsl{} \\
+\end{center}
+
+{ \large
+
+\begin{verse}
+
+\upchord{\AmiSix}Quiet nights of quiet stars \upchord{\DNine}
+\\ \upchord{\ENineMinusGSharp} Quiet chords from my guitar \upchord{\CmiSevenFiveMinus}
+\\ \upchord{\GmiSeven}Floating on the \upchord{\CNine}silence \upchord{\DNineMinusFSharp}that sur\upchord{\FSevenMaj}rounds us.
+\end{verse}
+
+\begin{verse}
+\upchord{\FmiSeven}   Quiet thoughts and quiet dreams\upchord{\BNine}
+\\ \upchord{\ASevenFivePlus}Quiet walks by quiet streams
+\\ \upchord{\AmiSeven}and a window that looks out on \upchord{\DmiSeven}Corcovado
+% looking on the mountains and the sea.
+\\ Oh, how \upchord{\FmiSeven}lovely.
+\end{verse}
+
+\begin{verse}
+ This is where I want to be
+\\ here with you so close to me
+\\ until the final flicker of life's ember.
+\end{verse}
+
+\begin{verse}
+   \upchord{\FmiSeven}I who was lost and \upchord{\BNine}lonely
+\\ \upchord{\EmiSeven}believeing life was \upchord{\AmiSeven}only 
+\\ \upchord{\DmiSeven}a bitter tragic \upchord{\FmiSeven}joke I found with \upchord{\EmiSevenFiveMinus}you.{\hspace{1cm}} \upchord{\ASevenFivePlus\ASeven}
+% \\ oh my dear.
+\\ \upchord{\DmiSeven}the meaning of \upchord{\FmiSeven}existence.
+\\ Oh, my \upchord{\AmiSix}love.
+\end{verse}
+
+% \pagebreak
+
+\begin{verse}
+   Um cantinho, um viol\~{a}o
+\\ Esse amor, uma can{\c{c}}\~{a}o
+\\ Pra fazer feliz a quem se ama
+\end{verse}
+
+\begin{verse}
+   Muita calma pra pensar
+\\ E ter tempo pra sonhar
+\\ Da janela v\^{e}-se o Corcovado
+\\ O Redentor, que lindo!
+\end{verse}
+
+\begin{verse}
+   Quero a vida sempre assim
+\\ Com voc\^{e} perto de mim
+\\ At\'{e} o apagar da velha chama
+\end{verse}
+
+\begin{verse}
+   E eu que era triste
+\\ Descrente desse mundo
+\\ Ao encontrar voc\^{e} eu conheci
+\\ O que \'{e} felicidade, meu amor.
+\end{verse}
+
+}
+
+\newpage
+Note: E${\,}^{9-}$/G${}^{\#}$ can be also called G${\,}^{13}$/9-.
+
+\end{document}
+

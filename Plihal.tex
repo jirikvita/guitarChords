@@ -1,0 +1,230 @@
+% _________________________________
+
+\documentclass[12pt]{article}
+
+\usepackage{geometry}
+\usepackage{gchords}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+%\usepackage{czech}
+%\usepackage{utf8}[inputenc]
+
+\setlength{\parindent}{0pt}
+% \setlength{\textwidth}{6.5in}
+\setlength{\textwidth}{7.2in}
+
+% \usepackage{gchords2}
+
+
+% From: Richard Cobbe (cobbe@directlink.net)
+% Subject: Re: Raised Guitar Chords in LaTeX 
+% Newsgroups: comp.text.tex
+% Date: 2000/04/20 
+% \newcommand{\chord}...
+
+\newcommand\mychords{
+\def\chordsize{2.2mm}   % distance between two frets (and two strings)
+\def\numfrets{6}
+\font\fingerfont=cmr5  % font used for numbering fingers
+% \font\fingerfont=cmmi5   % font used for numbering fingers
+\font\namefont=cmr12    % font used for labeling of the chord
+\font\fretposfont=cmr7  % font used for the fret position marker
+% \def\dampsymbol{$\scriptstyle\times$} %  `damp this string' marker
+\def\dampsymbol{{\tiny$\scriptstyle\times$}} %  `damp this string' marker
+}
+
+\renewcommand\yoff{3}
+\renewcommand\fingsiz{1.6}
+
+
+\newcommand{\CmiSevenFiveMinus}{\chord{t}{x,p3,p4,p3,p4,x}{Cmi${\,}^{7}_{5-}$}}
+\newcommand{\CNine}{\chord{t}{x,p3,p2,p3,p3,x}{C${\,}^{9}$}}
+\newcommand{\CisNine}{\chord{t}{x,p4,p3,p4,p4,x}{C${}^{\#9}$}}
+\newcommand{\CismiSeven}{\chord{t}{p9,x,p9,p9,p9,x}{C${}^\#$mi${\,}^{7}$}}
+\newcommand{\CismiSevenVar}{\chord{t}{p4,p4,p6,p4,p5,p4}{C${}^\#$mi${\,}^{7}$}}
+
+
+\newcommand{\DNine}{\chord{t}{x,p5,p4,p5,p5,x}{D${\,}^{9}$}}
+\newcommand{\DNineMinusFSharp}{\chord{t}{p2,x,p1,p2,p3,x}{D${\,}^{9-}$/F${}^{\#}$}}
+\newcommand{\DmiSeven}{\chord{t}{x,n,n,p2,p1,p1}{Dmi${\,}^{7}$}}
+
+\newcommand{\DismiSevenFiveMinus}{\chord{t}{x,p6,p7,p6,p7,x}{D${}^\#$mi${\,}^{7}_{5-}$}}
+
+\newcommand{\Edur}{\chord{t}{n,p2,p2,p1,n,x}{E${}$}}
+\newcommand{\ESix}{\chord{t}{n,p2,p2,p1,p2,x}{E${}^{6}$}}
+\newcommand{\ESixVar}{\chord{t}{n,p7,p6,p6,p5,n}{E${}^{6}$}}
+\newcommand{\ESeven}{\chord{t}{n,p2,n,p1,p3,x}{E${}^{7}$}}
+\newcommand{\ESevenMaj}{\chord{t}{n,p2,p1,p1,n,x}{E${}^{7{\rm maj}}$}}
+\newcommand{\ESevenMajFirst}{\chord{t}{n,x,p6,p4,p4,x}{E${}^{7{\rm maj}}$}}
+\newcommand{\ESevenMajVar}{\chord{t}{x,p7,p9,p8,p9,x}{E${}^{7{\rm maj}}$}}
+\newcommand{\ENineMinus}{\chord{t}{n,p2,p3,p1,p3,n}{E${}^{9-}$}}
+\newcommand{\ENineMinusGSharp}{\chord{t}{p4,x,p3,p4,p5,x}{E${\,}^{9-}$/G${}^{\#}$}}
+\newcommand{\EmiSeven}{\chord{t}{n,2,n,n,p3,n}{Emi${\,}^{7}$}}
+\newcommand{\EmiSevenFiveMinus}{\chord{t}{n,x,p2,p3,p3,n}{Emi${\,}^{7}_{5-}$}}
+
+\newcommand{\FSevenMaj}{\chord{t}{p1,x,p2,p2,p1,x}{F${\,}^{7{\rm maj}}$}}
+\newcommand{\FmiSeven}{\chord{t}{p1,x,p1,p1,p1,x}{Fmi${\,}^{7}$}}
+\newcommand{\FdimVar}{\chord{t}{x,p8,p9,p7,p9,x}{F${}^{{\rm dim}}$}}
+
+\newcommand{\FismiSeven}{\chord{t}{p2,x,p2,p2,p2,x}{F${}^{\#}$mi${\,}^{7}$}}
+\newcommand{\FisSeven}{\chord{t}{p2,x,p2,p3,p2,x}{F${}^\#{\,}^{7}$}}
+\newcommand{\FismiSevenVar}{\chord{t}{x,p9,p7,p9,p{10}}{F${}^\#$mi${\,}^{7}$}}
+\newcommand{\FismiNine}{\chord{t}{x,p9,p7,p9,p9,x}{F${}^\#$mi${\,}^{9}$}}
+
+\newcommand{\GmiSeven}{\chord{t}{f1p3,x,f2p3,f3p3,f4p3,x}{Gmi${\,}^{7}$}}
+\newcommand{\GDim}{\chord{t}{p3,x,p2,p3,p2,x}{Gdim${}$}}
+
+\newcommand{\GismiSeven}{\chord{t}{p4,x,p4,p4,p4,x}{G${}^\#$mi${\,}^{7}$}}
+\newcommand{\GisSevenFivePlus}{\chord{t}{p4,x,p4,p5,p5,x}{G${}^\#{\,}^{7}_{5-}$}}
+\newcommand{\GisSeven}{\chord{t}{p4,x,p4,p5,p4,x}{G${}^\#{\,}^{7}$}}
+
+\newcommand{\AmiSeven}{\chord{t}{p5,x,p5,p5,p5,x}{Ami${\,}^{7}$}}
+\newcommand{\AmiSix}{\chord{t}{p5,x,p4,p5,p5,x}{Ami${\,}^{6}$}}
+\newcommand{\ASix}{\chord{t}{p5,x,f2p4,f4p6,p5,x}{A${\,}^{6}$}}
+\newcommand{\ASevenFivePlus}{\chord{t}{n,n,p3,n,p2,n}{A${\,}^{7}_{5+}$}}
+\newcommand{\ASeven}{\chord{t}{n,n,p2,n,p2,n}{A${\,}^{7}$}}
+\newcommand{\ASevenMaj}{\chord{t}{p5,x,p6,p6,p5,x}{A${\,}^{7{\rm maj}}$}}
+
+\newcommand{\BNine}{\chord{t}{x,p1,n,p1,p1,x}{B${\,}^{{\rm b}7}$}}
+
+\newcommand{\HNine}{\chord{t}{x,p2,p1,p2,p2,x}{H${\,}^{9}$}}
+\newcommand{\HSeven}{\chord{t}{p7,x,p7,p8,p7,x}{H${\,}^{7}$}}
+\newcommand{\HNineMinus}{\chord{t}{x,p2,p1,p2,p1,x}{H${\,}^{9-}$}}
+\newcommand{\HmiSeven}{\chord{t}{p2,p2,p4,p2,p3,p2}{Hmi${\,}^{7}$}}
+\newcommand{\HSevenFour}{\chord{t}{p2,p2,p4,p2,p5,p2}{H${\,}^{7}_{4}$}}
+\newcommand{\HSevenVar}{\chord{t}{p2,p2,p4,p2,p4,p2}{H${\,}^{7}$}}
+\newcommand{\HThirteen}{\chord{t}{p7,x,p7,p8,f4p9,f4p9}{H${\,}^{7}$}}
+\newcommand{\HSevenSix}{\chord{t}{p7,x,p7,p8,p9,x}{H${\,}^{7}$}}
+
+
+% _________________________________
+% _________________________________
+% _________________________________
+
+\begin{document}
+
+\mychords
+
+% \mediumchords
+% \chord{t}{x,f3p3,f2p2,n,f1p1,f4p3,}{C}
+\pagestyle{empty}
+
+% _________________________________
+% textwidth is \textwidth.
+\begin{center}
+\Large
+\textbf{Odcházím z domova} \\ \textsl{Josef Kainar (dle Karla Plíhala)} \\
+ \textsl{} \\
+\end{center}
+% _________________________________
+
+
+{ \large
+
+% test:
+%žýřččéů
+
+% _________________________________
+
+\begin{verse}
+\upchord{\ESevenMajFirst}Druhého \upchord{\CNine}února v mlé\upchord{\FismiSeven}kařské hodi\upchord{\HNine}ně\ \ \ \ \upchord{\HNineMinus} 
+\\ já \upchord{\ESevenMaj}přec jen zesnul \upchord{\GDim}v pánu za\upchord{\GismiSeven}nechav jedi\upchord{\HmiSeven}ně\ \ --- \ \ \ \upchord{\ENineMinus}
+\\ \upchord{\FismiSeven}svou bytnou \upchord{\AmiSix}celou \upchord{\GisSevenFivePlus}\ \ lí\ \ ---\ \ \upchord{\CisNine}tou 
+\\ \upchord{\FismiSeven}kávu \ \ \upchord{\HNine}nedopitou \upchord{\ESix}{\phantom{HELLO}}\upchord{\ESevenMaj}{\phantom{HELLO}}\upchord{\FismiSeven}{\phantom{HELLO}}\upchord{\HNineMinus} 
+\\ \ 
+\\ Má duše usedla bezradně na šálek 
+\\ nechtělo se jí od kávy tam někam do dálek. 
+\\ \upchord{\ASix}Zatímco \upchord{\AmiSeven}venku \upchord{\GisSevenFivePlus}sví --- \upchord{\CisNine}tá, 
+\\ \upchord{\FismiSeven}má duše \upchord{\HNine}přemítá. \upchord{\ESix}\ \ \ \ \ \ \ \upchord{\ESeven}
+\def\numfrets{10}
+\\ Měla jsem \upchord{\ASevenMaj}tělo \ \ \ \upchord{\HSeven}svolný k \upchord{\ESevenMajVar}hříchu\upchord{\FdimVar}
+\\ teďka už \upchord{\FismiSevenVar}nemám \upchord{\HSeven}\ ani to\ \ \upchord{\ESevenMajVar} \ \ \ \ \  \ \ \upchord{\CismiSeven}
+\def\numfrets{7}
+\\ Co tady s \upchord{\DismiSevenFiveMinus}tebou ve \upchord{\GisSeven}vznešeným \upchord{\CismiSevenVar}tichu
+\\ Půjčte mi \upchord{\FisSeven}harfu nebo vary\upchord{\HSevenFour}to \ \ \ \ \ \ \upchord{\HSevenVar}
+\\ \ 
+\\ Najednou někdo duši tahá za ruku
+\\ Anděl jí harfu dává na věčnou záruku
+\\ Má duše teď v nebi zpívá
+\def\numfrets{10}
+\\ To \upchord{\FismiNine}blues ale jen to \upchord{\HThirteen}pravý 
+\\ o \upchord{\FismiNine}ranním šálku \upchord{\HThirteen}kávy
+\\ a \upchord{\FismiNine}má tam pořád, \upchord{\HSevenSix}pořád ---  nabi\upchord{\ESixVar}to.
+\end{verse}
+
+} % large
+
+% _________________________________
+
+\newpage
+
+{\textbf{Odcházím z domova}}
+\\ \textsl{Josef Kainar}
+\\
+\begin{verse}
+Odcházím z domova a beru s sebou klíč
+\\ Možná se stane zázrak zatímco budu pryč
+\\ Pomůžou mi všichni svatí
+\\ nájem se zaplatí
+\end{verse}
+
+\begin{verse}
+Má bytná na duchy však vůbec nevěří
+\\ a denně na mne čeká tam dole u dveří
+\\ Ja na ni vlídě s písní
+\\ ona mě vyplísní
+\end{verse}
+
+\begin{verse}
+Že sice pláče nad mou bídou
+\\ že jsem jen marnotratnej lump
+\\ A píše do komína černou křídou
+\\ o co jsem ji za ta léta pump
+\end{verse}
+
+\begin{verse}
+Mám klobouk děravý mám díru v kytaře
+\\ nikdo mě nezdraví a sám jsem na jaře
+\\ Ja zesnout se neodvážím
+\\ nemám na faráře
+\end{verse}
+
+\begin{verse}
+Druhého února v mlékařské hodině
+\\ já přec jen zesnul v pánu zanechav jedině
+\\ svou bytnou celou lítou 
+\\ kávu nedopitou
+\end{verse}
+
+\begin{verse} 
+Má duše usedla bezradně na šálek 
+\\ nechtělo se jí od kávy tam někam do dálek
+\\ Zatímco venku svítá
+\\ má duše přemítá
+\end{verse}
+
+\begin{verse} 
+Měla jsem tělo svolný k hříchu
+\\ teďka už nemám ani to
+\\ Co tady s tebou ve vznešeným tichu
+\\ Půjčte mi harfu nebo varyto
+\end{verse}
+
+\begin{verse}
+Najednou někdo duši tahá za ruku
+\\ Anděl jí harfu dává na věčnou záruku
+\\ Má duše teď v nebi zpívá
+\\ To blues ale jen to pravý 
+\\ o ranním šálku kávy
+\\ a má tam pořád, pořád
+\\ nabito.
+\end{verse}
+
+% _________________________________
+
+\end{document}
+
+
+% _________________________________
+% _________________________________
+% _________________________________
