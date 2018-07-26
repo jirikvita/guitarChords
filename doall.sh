@@ -7,7 +7,7 @@ for file in corcovado myChords Wave ; do
 done
 
 
-for file in Plihal ; do
+for file in Plihal ChordsTheory_cz ; do
   cslatex ${file}.tex
   dvips ${file}.dvi -o ${file}.ps
   dvipdf ${file}
